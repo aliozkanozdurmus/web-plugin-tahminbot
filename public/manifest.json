@@ -1,0 +1,32 @@
+{
+  "$schema": "../node_modules/@lobehub/chat-plugin-sdk/schema.json",
+  "version": "1",
+  "identifier": "hukusissearch",
+  "author": "aliozkanozdurmus",
+  "homepage": "https://www.linkedin.com/in/aliozkanozdurmus/",
+  "gateway": "https://hukusis-webplugin.invenire.tr/api/gateway",
+  "meta": {
+    "avatar": "https://banner2.cleanpng.com/20180413/rfe/avfci721i.webp",
+    "tags": ["hukusissearch", "search"],
+    "title": "hukusissearch",
+    "description": "Smart web search that reads and analyzes pages to deliver comprehensive answers from Google results."
+  },
+  "systemRole": "You are a helpful assistant that can search the web through Google Custom Search Engine and return the results in a structured format to help the user with their queries.",
+  "api": [
+    {
+      "name": "hukusissearch",
+      "url": "https://hukusis-webplugin.invenire.tr/api/search",
+      "description": "Search Google for relevant web pages.",
+      "parameters": {
+        "required": ["query"],
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string",
+            "description": "What the user is looking for"
+          }
+        }
+      }
+    }
+  ]
+}
